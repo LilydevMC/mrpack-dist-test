@@ -13,6 +13,8 @@ jobs:
     name: Test mrpack distributor
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+      WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
     steps:
       - name: Install packwiz
         uses: actions/setup-go@v4.1.0
