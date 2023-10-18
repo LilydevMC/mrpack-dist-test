@@ -24,4 +24,4 @@ jobs:
           git: https://github.com/LilydevMC/mrpack-distributor
           branch: main
       - name: Run release
-        run: mrpack-distributor run -dv ${{ github.events.inputs.version }}
+        run: mrpack-distributor run -dv ${{ github.event.inputs.version }}
