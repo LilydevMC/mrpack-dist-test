@@ -20,6 +20,7 @@ jobs:
       - name: Install mrpack-distributor from git repository
         uses: baptiste0928/cargo-install@v2
         with:
+          crate: mrpack-distributor
           git: https://github.com/LilydevMC/mrpack-distributor
           branch: main
       - name: Run release
