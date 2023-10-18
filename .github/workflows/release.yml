@@ -1,0 +1,26 @@
+name: Release
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        description: Modpack Version
+        required: true
+
+jobs:
+  run_mrpack_distributor:
+    runs-on: ubuntu-latest
+    name: Test mrpack distributor
+    steps:
+      - uses: actions/setup-go@v4.1.0
+      - run: go install github.com/packwiz/packwiz@latest
+      - name: Copy stuff
+        uses: actions/checkout@v4
+      - uses: jirutka/setup-alpine@v1
+        with:
+          branch: v3.15
+      - run: curl -L https://github.com/LilydevMC/mrpack-distributor/releases/download/0.1.0-alpha.2/mrpack-distributor_0.1.0-alpha.2_x86_64-unknown-linux-musl.tar.gz -o mrpack-dist.tar.gz
+      - run: tar xvf mrpack-dist.tar.gz && chmod +x mrpack-distributor
+      - run: ./mrpack-distributor run -dv ${{ github.event.inputs.version }}
+#        with:
+#          version: ${{ github.event.inputs.version }}

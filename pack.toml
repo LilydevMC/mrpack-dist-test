@@ -1,0 +1,12 @@
+name = "Mrpack Dist Test"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "5f4d527d602af5fbe604585eee82b8026471bec10e86ad7f6c5f64aa2bdf82d9"
+
+[versions]
+minecraft = "1.20.2"
+quilt = "0.21.0"

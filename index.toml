@@ -1,0 +1,31 @@
+hash-format = "sha256"
+
+[[files]]
+file = ".github/workflows/release.yml"
+hash = "9b5272d35067d013012f7d5ca650edfafeca024e5579e21c73cf57b30eaf3cec"
+
+[[files]]
+file = ".idea/inspectionProfiles/Project_Default.xml"
+hash = "f07c35064e6b5c0d6f6e4d2f0bce003e1bce714767be7ab173fad638e1fc4422"
+
+[[files]]
+file = ".idea/vcs.xml"
+hash = "6323e12648862a0a96fc0d7877672817d6cd91e2c2a3c3d78f1090db23c6e88e"
+
+[[files]]
+file = ".idea/workspace.xml"
+hash = "2e55447aa507150ce6d6d6dcdcd86e1f99871a5ade512ae3c1318813873776dd"
+
+[[files]]
+file = "LICENSE"
+hash = "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+
+[[files]]
+file = "mods/iris.pw.toml"
+hash = "7df52a269aaabcb9c4d3ce72322177f4cb5d2e8fc8d506554fa6b6290b0ad548"
+metafile = true
+
+[[files]]
+file = "mods/sodium.pw.toml"
+hash = "ff614f50beb3bc29a699dbcc0a61f65bd6c6154cd374f2763ee57cf578045a8f"
+metafile = true
