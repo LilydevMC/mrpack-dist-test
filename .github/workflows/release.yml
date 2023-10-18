@@ -10,7 +10,7 @@ on:
 jobs:
   run_mrpack_distributor:
     runs-on: ubuntu-latest
-    name: Test mrpack distributor
+    name: Release Test
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
@@ -18,14 +18,16 @@ jobs:
     steps:
       - name: Install packwiz
         uses: actions/setup-go@v4.1.0
+        with:
+          go-version: '1.21.3'
       - run: go install github.com/packwiz/packwiz@latest
-      - name: Copy stuff
-        uses: actions/checkout@v4
       - name: Install mrpack-distributor from git repository
         uses: baptiste0928/cargo-install@v2
         with:
           crate: mrpack-distributor
           git: https://github.com/LilydevMC/mrpack-distributor
           branch: main
+      - name: Checkout Repository Files
+        uses: actions/checkout@v4
       - name: Run release
         run: mrpack-distributor run -dv ${{ github.event.inputs.version }}
